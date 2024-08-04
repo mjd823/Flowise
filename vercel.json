@@ -5,15 +5,11 @@
   "installCommand": "pnpm install",
   "framework": null,
   "builds": [
-    {
-      "src": "packages/server/dist/index.js",
-      "use": "@vercel/node"
-    }
+    { "src": "packages/server/dist/index.js", "use": "@vercel/node" },
+    { "src": "packages/ui/dist/**", "use": "@vercel/static" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "packages/server/dist/index.js"
-    }
+    { "src": "/api/(.*)", "dest": "packages/server/dist/index.js" },
+    { "src": "/(.*)", "dest": "packages/ui/dist/$1" }
   ]
 }
