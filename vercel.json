@@ -1,8 +1,9 @@
 {
   "version": 2,
-  "buildCommand": "turbo run build",
+  "buildCommand": "pnpm run build",
   "outputDirectory": "packages/server/dist",
-  "framework": "node",
+  "installCommand": "pnpm install",
+  "framework": null,
   "builds": [
     {
       "src": "packages/server/dist/index.js",
