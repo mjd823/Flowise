@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "buildCommand": "turbo run build",
+  "outputDirectory": "packages/server/dist",
+  "framework": "node",
   "builds": [
     {
       "src": "packages/server/dist/index.js",
